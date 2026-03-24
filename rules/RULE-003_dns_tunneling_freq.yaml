@@ -1,0 +1,13 @@
+id: RULE-003
+name: DNS Tunneling (High Frequency)
+description: Unusually high volume of DNS queries from a single host in a short window.
+severity: Medium
+mitre_techniques:
+  - T1071.004
+conditions:
+  type: threshold
+  source_type: dns
+  group_by: source_ip
+  count: 50
+  window_seconds: 30
+playbook: playbooks/dns_tunneling.md

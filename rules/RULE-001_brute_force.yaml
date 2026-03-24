@@ -1,0 +1,15 @@
+id: RULE-001
+name: Brute Force Authentication
+description: Repeated failed logins from a single IP (password guessing).
+severity: High
+mitre_techniques:
+  - T1110
+  - T1110.001
+conditions:
+  type: threshold
+  source_type: windows_auth
+  result: failure
+  group_by: source_ip
+  count: 5
+  window_seconds: 60
+playbook: playbooks/brute_force.md

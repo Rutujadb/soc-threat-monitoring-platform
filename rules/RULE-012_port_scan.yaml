@@ -1,0 +1,13 @@
+id: RULE-012
+name: Internal Port Scan
+description: Many distinct destination ports from one internal host in a short time.
+severity: Medium
+mitre_techniques:
+  - T1046
+conditions:
+  type: threshold
+  source_type: netflow
+  group_by: source_ip
+  count: 20
+  window_seconds: 10
+playbook: playbooks/port_scan.md

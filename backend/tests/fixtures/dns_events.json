@@ -1,0 +1,11 @@
+[
+  {
+    "source_type": "dns",
+    "log": {
+      "query_name": "short.example.com",
+      "client_ip": "10.0.0.5",
+      "response_code": "NOERROR",
+      "timestamp": "2024-06-01T09:00:00Z"
+    }
+  }
+]

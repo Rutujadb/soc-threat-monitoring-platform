@@ -1,0 +1,12 @@
+id: RULE-006
+name: Pass-the-Hash Indicator
+description: Network logon using NTLM consistent with pass-the-hash activity.
+severity: Critical
+mitre_techniques:
+  - T1550.002
+conditions:
+  type: pattern
+  source_type: windows_auth
+  field: action
+  regex: "(?i)NTLM.*Network.*Logon"
+playbook: playbooks/pass_the_hash.md

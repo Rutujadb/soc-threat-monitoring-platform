@@ -1,0 +1,12 @@
+id: RULE-008
+name: Lateral Movement via PsExec
+description: SMB/ADMIN$/IPC$ patterns associated with PsExec-style lateral movement.
+severity: Critical
+mitre_techniques:
+  - T1021.002
+conditions:
+  type: pattern
+  source_type: netflow
+  field: action
+  regex: "(?i)psexec|ADMIN\\$|IPC\\$"
+playbook: playbooks/lateral_movement.md

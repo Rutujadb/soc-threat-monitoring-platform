@@ -1,0 +1,12 @@
+id: RULE-005
+name: Privilege Escalation via Sudo
+description: Sudo or elevated command execution on Linux hosts.
+severity: High
+mitre_techniques:
+  - T1548.003
+conditions:
+  type: pattern
+  source_type: linux_auth
+  field: action
+  regex: "(?i)sudo"
+playbook: playbooks/privilege_escalation.md

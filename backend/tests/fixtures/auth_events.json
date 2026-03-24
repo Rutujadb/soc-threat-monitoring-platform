@@ -1,0 +1,15 @@
+[
+  {
+    "source_type": "windows_auth",
+    "log": {
+      "EventID": 4624,
+      "SubjectUserName": "alice",
+      "IpAddress": "10.0.0.10",
+      "WorkstationName": "PC01",
+      "LogonType": 10,
+      "Status": "0x0",
+      "SubStatus": "0x0",
+      "TimeCreated": "2024-06-01T09:00:00Z"
+    }
+  }
+]

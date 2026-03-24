@@ -1,0 +1,12 @@
+id: RULE-013
+name: Suspicious PowerShell Execution
+description: PowerShell with common obfuscation switches (-enc, -nop, hidden, bypass).
+severity: High
+mitre_techniques:
+  - T1059.001
+conditions:
+  type: pattern
+  source_type: sysmon
+  field: action
+  regex: "(?i)powershell.*(-enc|-nop|-w hidden|bypass)"
+playbook: playbooks/suspicious_powershell.md

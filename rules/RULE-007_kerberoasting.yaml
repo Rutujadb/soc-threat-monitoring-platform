@@ -1,0 +1,15 @@
+id: RULE-007
+name: Kerberoasting (SPN Ticket Spike)
+description: Elevated rate of Kerberos service ticket requests for one account.
+severity: High
+mitre_techniques:
+  - T1558.003
+conditions:
+  type: threshold
+  source_type: windows_auth
+  field: action
+  value: KerberosServiceTicket
+  group_by: username
+  count: 10
+  window_seconds: 60
+playbook: playbooks/kerberoasting.md

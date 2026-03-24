@@ -1,0 +1,14 @@
+[
+  {
+    "source_type": "sysmon",
+    "log": {
+      "EventID": 1,
+      "Image": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+      "CommandLine": "cmd.exe /c echo test",
+      "ParentImage": "C:\\\\Windows\\\\explorer.exe",
+      "User": "bob",
+      "Computer": "PC99",
+      "UtcTime": "2024-06-01T09:00:00Z"
+    }
+  }
+]

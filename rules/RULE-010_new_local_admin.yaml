@@ -1,0 +1,12 @@
+id: RULE-010
+name: New Local Admin Account Activity
+description: Local group membership change indicating possible admin account creation.
+severity: High
+mitre_techniques:
+  - T1136.001
+conditions:
+  type: pattern
+  source_type: windows_auth
+  field: action
+  regex: "(?i)LocalGroupMembershipChanged.*Administrators"
+playbook: playbooks/new_admin_account.md

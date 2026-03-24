@@ -1,0 +1,12 @@
+id: RULE-009
+name: LSASS Access Attempt
+description: Process access against lsass.exe — credential theft technique.
+severity: Critical
+mitre_techniques:
+  - T1003.001
+conditions:
+  type: pattern
+  source_type: sysmon
+  field: action
+  regex: "(?i)lsass\\.exe"
+playbook: playbooks/lsass_access.md

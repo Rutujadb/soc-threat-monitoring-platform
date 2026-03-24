@@ -1,0 +1,12 @@
+id: RULE-015
+name: Service Installed on Endpoint
+description: sc.exe service creation or PowerShell New-Service patterns.
+severity: Medium
+mitre_techniques:
+  - T1543.003
+conditions:
+  type: pattern
+  source_type: sysmon
+  field: action
+  regex: "(?i)sc\\.exe.*create|New-Service"
+playbook: playbooks/new_service.md
